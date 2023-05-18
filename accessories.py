@@ -66,38 +66,6 @@ def func_add(l_sn, meter):
         collision_river = input(Fore.LIGHTGREEN_EX + "Czy wystepuje pozwolenie z Wód Polskich ? y/n ").lower()
         return False if collision_river != "y" and collision_river != "n" else True
 
-    @decorator_error2
-    def road():
-        collision_road = input("Czy występują kolizje z drogami ? y/n ")
-        if collision_road == "y":
-
-            COST_ROAD = 1500
-            COST_PROJECT_ROAD = 2000
-
-            # @decorator_error2
-            # def func_road_city(COST):
-            #     collision_road_city = input("Czy jest to droga miejska? ")
-            #     return print(f"Droga miejska: {COST} zł") if collision_road_city == "y" else False
-            #
-            # @decorator_error2
-            # def func_road_powiat(COST):
-            #     collision_road_powiat = input("Czy jest to droga powiatowa? ")
-            #     return print(f"Droga powiatowa: {COST} zł") if collision_road_powiat == "y" else False
-
-            def func_project_road(COST):
-                quantity = int(input("Ile potrzebujesz projektów organizacji ruchu? "))
-                return print(f"Projekt organizacji ruchu: {COST * quantity} zł") if quantity != 0 else False
-
-            # func_road_city(COST_ROAD)
-            # func_road_powiat(COST_ROAD)
-            # func_project_road(COST_PROJECT_ROAD)
-
-        else:
-            pass
-
-
-
-
 
     COST_MPEC = 1000
     COST_GAZ = 2000
@@ -148,30 +116,30 @@ def func_add(l_sn, meter):
     def func_turn_off(COST, how_much):
         return print(f"Wyłączenie: {COST * how_much}  ") if turn_off == "y" else False
 
-    # cost_project()
-    # turn_off()
-    # cost_petrol()
-    # distance()
+    cost_project()
+    turn_off()
+    cost_petrol()
+    distance()
 
 
-    # func_projects(cost_project)
-    # func_turn_off(COST_TURN_OFF, turn_off)
-    # func_kenetration(l_sn)
-    # func_mpec(COST_MPEC, collision_mpec)
-    # func_gaz(COST_GAZ, collision_gaz)
-    # func_pkp(COST_PKP, collision_PKP)
-    # func_river(COST_RIVER, collision_river)
-    # func_optical_fiber(COST_OPTICAL_FIBER, collision_optical)
-    # func_road_city(COST_ROAD, collision_road_city)
-    # func_road_powiat(COST_ROAD, collision_road_powiat)
-    # func_project_road(COST_PROJECT_ROAD, collision_project_road)
-    #
-    # print(f"Paliwo: {(((10 * cost_petrol) * distance) * number_of_trips) * 2}")
-    # print(f"Geodezja: {geodesy} zł")
-    # print(f"Dostawa kabla: {CABLE_DELIVERY} zł")
-    # print(f"Dokumentacja powykonawcza: {DOC_COMPLETION} zł")
-    # print(f"Materiały dodatkowe: {MATERIALS_ADD} zł")
-    # print(f"Przygotowanie: {PREPARE} zł \nSprzątanie: {CLEAN} zł")
+    func_projects(cost_project)
+    func_turn_off(COST_TURN_OFF, turn_off)
+    func_kenetration(l_sn)
+    func_mpec(COST_MPEC, collision_mpec)
+    func_gaz(COST_GAZ, collision_gaz)
+    func_pkp(COST_PKP, collision_PKP)
+    func_river(COST_RIVER, collision_river)
+    func_optical_fiber(COST_OPTICAL_FIBER, collision_optical)
+    func_road_city(COST_ROAD, collision_road_city)
+    func_road_powiat(COST_ROAD, collision_road_powiat)
+    func_project_road(COST_PROJECT_ROAD, collision_project_road)
+
+    print(f"Paliwo: {(((10 * cost_petrol) * distance) * number_of_trips) * 2}")
+    print(f"Geodezja: {geodesy} zł")
+    print(f"Dostawa kabla: {CABLE_DELIVERY} zł")
+    print(f"Dokumentacja powykonawcza: {DOC_COMPLETION} zł")
+    print(f"Materiały dodatkowe: {MATERIALS_ADD} zł")
+    print(f"Przygotowanie: {PREPARE} zł \nSprzątanie: {CLEAN} zł")
 
 
 func_add(line_sn, meters)
