@@ -14,4 +14,4 @@ def func_projects(c_project):
     return print(f"Projekt: {c_project} zł") if c_project != 0 else False
 
 
-func_projects(cost_project())
+func_projects(cost_project())#####
