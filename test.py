@@ -4,7 +4,7 @@ from colorama import Fore
 line_sn = 5
 meters = 1000
 number_of_trips = 6
-
+###
 
 def cost_project():
     cost_project = int(input(Fore.LIGHTGREEN_EX + "Ile wynosi koszt wykonania projektu ? "))
