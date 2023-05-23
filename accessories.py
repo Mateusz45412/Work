@@ -32,7 +32,7 @@ def func_turn_off():
     return turn_off
 
 
-turn_off = func_turn_off()
+# turn_off = func_turn_off()
 
 
 @decorator_error
@@ -102,7 +102,9 @@ COST_PROJECT_ROAD = 2000
 COST_RIVER = 2000
 COST_PKP = 10000
 
-kenetration = 1700 + ((line_sn - 1) * 500)
+cabel1 = ((line_sn-1)//3)+1
+cabel2 = line_sn-cabel1
+kenetration = (cabel1*1700)+(cabel2*500)
 
 PREPARE = 2400
 CLEAN = 2400
@@ -136,9 +138,9 @@ def func_optical_fiber(COST, c_optical):
     return print(f"Światłowody: {COST} zł") if c_optical == "y" else False
 
 func_projects(cost_project)
-func_kenetration()
-func_mpec()
-func_gaz()
-func_pkp()
-func_river()
-func_optical_fiber()
+func_kenetration(kenetration)
+# func_mpec()
+# func_gaz()
+# func_pkp()
+# func_river()
+# func_optical_fiber()
