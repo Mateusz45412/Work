@@ -18,7 +18,7 @@ def decorator_error(func_as_param):
 def func_cost_project():
     cost_project = int(input(Fore.LIGHTGREEN_EX + "Ile wynosi koszt wykonania projektu ? "))
     return cost_project
-
+##
 
 cost_project = func_cost_project()
 
