@@ -2,7 +2,7 @@ import colorama
 line_sn = 5
 meters = 1000
 number_of_trips = 6
-#######
+########
 def decorator_error(func_as_param):
     def func_safeguard():
         while True:
