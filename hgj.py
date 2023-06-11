@@ -1,7 +1,7 @@
 def decorator_error(func_as_param):
     def func_safeguard():
         while True:
-            try:
+            try:##
                 func_as_param()  # <-- wywołanie
                 break
             except ValueError:
